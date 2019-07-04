@@ -5,9 +5,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     const embed = new Discord.RichEmbed()
     .setColor('#eeeeee')
     .setTitle('Cytrus Rewrite Github')
-    .setFooter('Made by CelestialCrafter#6830 and EnderGirlGamer#5370, Rewritten by EDGE#9573, Rexowogamer
-#1183, and Midou
-#9637')
+    .setFooter('Made by CelestialCrafter#6830 and EnderGirlGamer#5370, Rewritten by EDGE#9573, Rexowogamer#1183, and Midou#9637')
     .setDescription(`Github: [Production Github](https://github.com/Rexogamer/cytrus)
 Website: [Website](https://cytrus.ga)
 API: [API](https://api.cytrus.ga/api)
@@ -31,6 +29,6 @@ exports.conf = {
 exports.help = {
   name: 'info',
   category: 'General',
-  description: 'Returns info about Cytrus',
+  description: 'Returns info about Cytrus.',
   usage: 'info'
 };
