@@ -2,17 +2,17 @@ const math = require('mathjs');
 
 exports.run = async (client, message, args, level) => {
   try {
-    if (!args[0]) return message.reply('You need to input the equasion!');
+    if (!args[0]) return message.reply('You need to input the equation!');
     
     message.channel.send('Output: ' + math.eval(args.join(' ')));
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send('There was an error!\n' + err).catch();
   }
 };
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ['calc'],
   guildOnly: false,
   permLevel: 'User'
 };
