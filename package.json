@@ -1,6 +1,6 @@
 {
-  "name": "cytrus",
-  "version": "2.4.8",
+  "name": "cytrus-re",
+  "version": "rv1.0",
   "description": "A multipurpose bot to handle all your needs.",
   "main": "app.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CelestialCrafter/cytrus"
+    "url": "https://github.com/Rexogamer/cytrus"
   },
   "author": "CelestialCrafter#6830, EnderGirlGamer#5370",
   "license": "MIT",
@@ -72,8 +72,8 @@
     "nodemon": "^1.18.10"
   },
   "bugs": {
-    "url": "https://github.com/CelestialCrafter/cytrus/issues"
+    "url": "https://github.com/Rexogamer/cytrus/issues"
   },
-  "homepage": "https://cytrus.ga",
+  "homepage": "https://github.com/Rexogamer/cytrus",
   "snyk": true
 }
