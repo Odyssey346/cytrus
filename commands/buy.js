@@ -1,8 +1,8 @@
 const buyItem = (name, amount, client, message) => {
   let money = client.money.get(message.author.id, 'money');
   
-  if (money < amount) return message.reply('You dont have enough money to buy this command!');
-  if (client.items.has(message.author.id, name)) return message.reply('You already bought this item!')
+  if (money < amount) return message.reply("You don't have enough money to buy this command!");
+  if (client.items.has(message.author.id, name)) return message.reply("You've already bought this item!")
         
   client.money.set(message.author.id, money - amount, 'money');
   client.items.set(message.author.id, true, name);
@@ -29,7 +29,7 @@ RickRoll - $75`);
         buyItem('rickroll', 200, client, message);
         break;
       default:
-        message.reply('Thats not an item!');
+        message.reply("That's not an item!");
         break;
     }
   } catch (err) {
@@ -39,7 +39,7 @@ RickRoll - $75`);
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ['shop'],
   guildOnly: false,
   permLevel: 'User'
 };
@@ -47,6 +47,6 @@ exports.conf = {
 exports.help = {
   name: 'buy',
   category: 'Money',
-  description: 'Buys an item',
+  description: 'Purchases an item using the money you get from stone mining.',
   usage: 'buy'
 };
