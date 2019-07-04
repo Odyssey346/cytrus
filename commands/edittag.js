@@ -3,16 +3,16 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     let msg = await message.channel.send('Editing tag...');
     
     if (!args.join(' ').split('|')[0]) return message.reply('You have to name the tag!');
-    if (!args.join(' ').split('|')[1]) return message.reply('You have to supply text for the tag!');
+    if (!args.join(' ').split('|')[1]) return message.reply('You have to supply the text for the tag!');
     
     if (!client.tags.has(message.guild.id)) client.tags.set(message.guild.id, {});
-    if (!client.tags.has(message.guild.id, args.join(' ').split('|')[0])) return message.reply('Thats not a tag!');
+    if (!client.tags.has(message.guild.id, args.join(' ').split('|')[0])) return message.reply("That's not a tag!");
     client.tags.set(message.guild.id, {
       name: args.join(' ').split('|')[0],
       text: args.join(' ').split('|')[1]
     }, args.join(' ').split('|')[0]);
     
-    msg.edit('Tag Edited with the id of ' + message.id + '!');
+    msg.edit('Tag edited with an ID of ' + message.id + '!');
   } catch (err) {
     message.channel.send('There was an error!\n' + err).catch();
   }
@@ -20,7 +20,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ['etag'],
   guildOnly: false,
   permLevel: 'Administrator'
 };
@@ -28,6 +28,6 @@ exports.conf = {
 exports.help = {
   name: 'edittag',
   category: 'General',
-  description: 'Creates a tag that triggers whenever somone says the specified message',
+  description: 'Edits a tag.',
   usage: 'edittag trigger|text'
 };
