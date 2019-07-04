@@ -16,7 +16,7 @@ exports.run = (client, message, args, level) => {
       });
       
       let embed = new client.Embed('normal', {
-        title: 'Cytrus Help',
+        title: 'Cytrus-RE Help',
         thumbnail: client.user.avatarURL,
         description: output
       });
