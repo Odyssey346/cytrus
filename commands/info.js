@@ -4,13 +4,16 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   try {
     const embed = new Discord.RichEmbed()
     .setColor('#eeeeee')
-    .setTitle('Cytrus Github')
-    .setFooter('Made by CelestialCrafter#6830 and EnderGirlGamer#5370')
-    .setDescription(`Github: [Production Github](https://github.com/CelestialCrafter/cytrus)
+    .setTitle('Cytrus Rewrite Github')
+    .setFooter('Made by CelestialCrafter#6830 and EnderGirlGamer#5370, Rewritten by EDGE#9573, Rexowogamer
+#1183, and Midou
+#9637')
+    .setDescription(`Github: [Production Github](https://github.com/Rexogamer/cytrus)
 Website: [Website](https://cytrus.ga)
 API: [API](https://api.cytrus.ga/api)
-Support Server: [Server](https://discord.gg/a7vxMM5)
-Issues: [Github](https://github.com/CelestialCrafter/cytrus/issues)`);
+Support Server: [Server](https://discord.gg/4WgsA2q)
+Issues: [Github](https://github.com/Rexogamer/cytrus/issues)
+Version: RexoV1.0`);
 
     message.channel.send(embed);
   } catch (err) {
