@@ -19,7 +19,7 @@ exports.conf = {
 
 exports.help = {
   name: 'math',
-  category: 'Fun',
+  category: 'Utility',
   description: 'Does math and returns the value',
   usage: 'math'
 };
