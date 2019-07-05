@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
   try {
     let output = '';
     let i = 1;
-    if (!args[0]) return message.reply('You need to input somthing to search!');
+    if (!args[0]) return message.reply('You need to give me something to search!');
     
     request({url: 'https://api.npms.io/v2/search?q=' + encodeURIComponent(args.join(' ')), json: true}, async (req, res, json) => {
       if (json.results.length > 5) json.results.length = 5;
@@ -14,8 +14,8 @@ exports.run = async (client, message, args, level) => {
         i++;
       });
       
-      let module = await client.awaitReply(message, `Please choose the Module you want${output}`);
-      if (isNaN(module)) return message.reply('Thats not a number!');
+      let module = await client.awaitReply(message, "Please choose the module you want: ${output}");
+      if (isNaN(module)) return message.reply("That's not a number!");
       
       let mnum = Number(module) - 1;
       let package = json.results[mnum].package;
@@ -56,6 +56,6 @@ exports.conf = {
 exports.help = {
   name: 'npmsearch',
   category: 'General',
-  description: 'Searches the Node Package Manager for your search term',
+  description: 'Searches the Node Package Manager for you.',
   usage: 'npmsearch <query>'
 };

@@ -12,18 +12,18 @@ exports.run = async (client, message, args, level) => {
           const modLogChannel = settings.modLogChannel;
           if (modLogChannel && message.guild.channels.find(c => c.name === settings.modLogChannel)) {
             let embed = new Discord.RichEmbed()
-            .setTitle('User Ban')
+            .setTitle('User Banned')
             .setColor('#eeeeee')
             .setDescription(`Name: ${user.username}\nID: ${args[0]}\nReason: ${args.slice(1).join(' ')}\nModerator: ${message.author.username}`);
 
             message.guild.channels.find(c => c.name === settings.modLogChannel).send(embed);
           }
         }).catch(err => {
-          message.reply('I was unable to ban the member');
+          message.reply('I was unable to ban the user.');
         });
-    } else message.channel.send('You did not input a valid UserID');
+    } else message.channel.send("You didn't provide a valid UserID!");
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err +'').catch();
+    message.channel.send('There was an error!\n' + err +'').catch();
   }
 };
 
@@ -37,6 +37,6 @@ exports.conf = {
 exports.help = {
   name: 'forceban',
   category: 'Moderation',
-  description: 'Bans a member and does not have to be in your guild.',
-  usage: 'forceban @<user> [reason]'
+  description: 'Bans a member not in your server.',
+  usage: 'forceban @<userID> [reason]'
 };

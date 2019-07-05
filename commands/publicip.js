@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
       });
     });
   } catch (err) {
-    message.channel.send('Their was an error!\n' + err).catch();
+    message.channel.send('There was an error!\n' + err).catch();
   }
 };
 
@@ -23,6 +23,6 @@ exports.conf = {
 exports.help = {
   name: 'publicip',
   category: 'System',
-  description: 'Returns the Cytrus public IP',
+  description: 'Returns the public IP of Cytrus.',
   usage: 'publicip'
 };

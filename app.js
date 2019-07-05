@@ -8,8 +8,6 @@ if (process.env.PREBOOT) eval(process.env.PREBOOT);
 const Discord = require('discord.js');
 const Enmap = require('enmap');
 const CleverBotAPI = require('cleverbot.io');
-const NekosLifeAPI = require('nekos.life');
-const LolisLifeAPI = require('lolis.life');
 
 //Define client
 const client = new Discord.Client({
@@ -17,7 +15,7 @@ const client = new Discord.Client({
   disabledEvents: ['TYPING_START']
 });
 
-//Define time of Startup
+//Define time of startup
 client.starttime = new Date().getTime();
 
 //Define Databases/Objects
@@ -40,17 +38,11 @@ client.liusers = new Discord.Collection();
 client.music = {};
 client.levelCache = {};
 
-//Define Nekos.life API
-client.nekoslife = new NekosLifeAPI();
-
-//Define Lolis.life API
-client.lolislife = new LolisLifeAPI();
-
 //Define CleverBot API
 client.cleverbot = new CleverBotAPI(process.env.CLEVERBOT_USER_KEY, process.env.CLEVERBOT_API_KEY);
 client.cleverbot.setNick('CytrusBot');
 
-//Generate Session secret
+//Generate session secret
 process.env.SESSION_SECRET = '';
 for (let i = 0; i <= 1500; i++)
   process.env.SESSION_SECRET += Math.random()
