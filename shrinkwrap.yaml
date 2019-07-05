@@ -15,12 +15,10 @@ dependencies:
   form-data: 2.4.0
   google: 1.5.0
   js-beautify: 1.10.0
-  lolis.life: 4.0.0
   mathjs: 5.10.3
   moment: 2.24.0
   moment-duration-format: 2.3.2
   ms: 2.1.2
-  nekos.life: 2.0.4
   node-fetch: 2.6.0
   node-opus: 0.3.2
   node-weeb: 1.0.4
@@ -3082,10 +3080,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
-  /nekos.life/2.0.4:
-    dev: false
-    resolution:
-      integrity: sha512-WNY7jj7XHQLuORep9RbqJP8NwwfmPaQ6mmpHppJhtXkGiIx6aC54cx1P66pTdiK84HZvF82+lRsy4NBq0mEg3A==
   /netmask/1.0.6:
     dev: false
     engines:
