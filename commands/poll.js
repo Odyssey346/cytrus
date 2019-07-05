@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   try {
-    if (!args.join(' ')) return message.reply('You need to supply the question');
+    if (!args.join(' ')) return message.reply('You need to give the question.');
     
     let embed = new Discord.RichEmbed()
     .setTitle(args.join(' '))
@@ -21,7 +21,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 
 exports.conf = {
   enabled: true,
-  aliases: [],
+  aliases: ['vote', 'ask'],
   guildOnly: false,
   permLevel: 'User'
 };
@@ -29,6 +29,6 @@ exports.conf = {
 exports.help = {
   name: 'poll',
   category: 'General',
-  description: 'Starts a poll',
+  description: 'Starts a poll.',
   usage: 'poll <question>'
 };

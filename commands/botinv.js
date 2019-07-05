@@ -16,6 +16,6 @@ exports.conf = {
 exports.help = {
   name: 'botinv',
   category: 'General',
-  description: 'Sends the invite link for Cytrus.',
+  description: 'Gives the invite link for Cytrus.',
   usage: 'botinv'
 };
